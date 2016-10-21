@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Iteration } from '../iteration/iteration';
+import { NewIteration }  from '../new-iteration/new-iteration';
+
 import { IterationsService } from '../../providers/iterations-service';
 /*
   Generated class for the Project page.
@@ -24,6 +26,10 @@ export class Project {
 
   goToIteration(iterationId){
     this.navCtrl.push(Iteration, {id: iterationId});
+  }
+
+  goToNewIteration(){
+    this.navCtrl.push(NewIteration);
   }
 
   loadIterations(){

@@ -4,13 +4,16 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { Project } from '../pages/project/project';
 import { Iteration } from '../pages/iteration/iteration';
+import { NewIteration } from '../pages/new-iteration/new-iteration';
+
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     Project,
-    Iteration
+    Iteration,
+    NewIteration
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -20,7 +23,8 @@ import { Iteration } from '../pages/iteration/iteration';
     MyApp,
     HomePage,
     Project,
-    Iteration
+    Iteration,
+    NewIteration
   ],
   providers: []
 })

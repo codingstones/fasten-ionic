@@ -12,11 +12,15 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'new-iteration.html'
 })
 export class NewIteration {
-
+  iteration;
   constructor(public navCtrl: NavController) {}
 
   ionViewDidLoad() {
-    console.log('Hello NewIteration Page');
+    this.iteration = {}
+  }
+
+  create(){
+    console.log(this.iteration)
   }
 
 }

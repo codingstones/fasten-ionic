@@ -10,17 +10,8 @@
 <ion-content padding>
   <h1>Conecta</h1>
   <ion-list>
-      <ion-item>
-        <h2 (click)="goToIteration()">Iteration 0</h2>
-      </ion-item>
-      <ion-item>
-        <h2>Iteration 1</h2>
-      </ion-item>
-      <ion-item>
-        <h2>Iteration 2</h2>
-      </ion-item>
-      <ion-item>
-        <h2>Iteration 3</h2>
-      </ion-item>
-    </ion-list>
+    <ion-item *ngFor="let iteration of iterations">
+      <h2 (click)="goToIteration(iteration.id)">{{iteration.name}}</h2>
+    </ion-item>
+  </ion-list>
 </ion-content>

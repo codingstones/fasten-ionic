@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Iteration } from '../iteration/iteration';
-
+import { IterationsService } from '../../providers/iterations-service';
 /*
   Generated class for the Project page.
 
@@ -10,18 +10,27 @@ import { Iteration } from '../iteration/iteration';
 */
 @Component({
   selector: 'page-project',
-  templateUrl: 'project.html'
+  templateUrl: 'project.html',
+  providers: [IterationsService]
 })
 export class Project {
+  iterations;
 
-  constructor(public navCtrl: NavController) {}
+  constructor(public navCtrl: NavController, public iterationsService: IterationsService) {}
 
   ionViewDidLoad() {
-    console.log('Hello Project Page');
+    this.loadIterations();
   }
 
-  goToIteration(){
-    this.navCtrl.push(Iteration);
+  goToIteration(iterationId){
+    this.navCtrl.push(Iteration, {id: iterationId});
+  }
+
+  loadIterations(){
+    this.iterationsService.iterationsByProject()
+      .subscribe(data => {
+        this.iterations = data;
+      });
   }
 
 }

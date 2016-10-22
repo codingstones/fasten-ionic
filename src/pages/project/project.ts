@@ -32,8 +32,8 @@ export class Project {
     this.navCtrl.push(Iteration, {id: iterationId});
   }
 
-  goToNewIteration(){
-    this.navCtrl.push(NewIteration);
+  goToNewIteration(project){
+    this.navCtrl.push(NewIteration, {project: project});
   }
 
   loadProject(projectId){

@@ -20,7 +20,7 @@ export class ProjectsService {
     return Observable.fromPromise(promise);
   }
 
-  createIteration(data){
+  createIteration(projectId, data){
     console.log('TO IMPLEMENT');
   }
 

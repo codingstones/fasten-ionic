@@ -1,101 +1,122 @@
 <ion-header>
   <ion-navbar>
-  <ion-title *ngIf="iteration">Edit {{iteration.name}}</ion-title>
+  <ion-title>Iteration</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-  <h1 text-center *ngIf="iteration">{{iteration.name}}</h1>
-  <ion-list>
-    <ion-item>
-      <ion-label>Total</ion-label>
-      <ion-input type="text" value="7.200€"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label>Common percent</ion-label>
-      <ion-input type="text" value="3,5%"></ion-input>
-    </ion-item>
-  </ion-list>
-  <h3 padding>People</h3>
+<ion-content padding>
+  <h2 text-center *ngIf="iteration">{{iteration.name}}</h2>
   <ion-card>
-    <ion-card-header>
-    <ion-icon name="person" item-left></ion-icon>
-      Alberto Gualis
-    </ion-card-header>
     <ion-list>
       <ion-item>
-        <ion-label>Active</ion-label>
-        <ion-toggle checked="true"></ion-toggle>
+        <ion-note item-left>TOTAL</ion-note>
+        <ion-label text-right>7.200 €</ion-label>
       </ion-item>
       <ion-item>
-      <ion-label>Individual percent</ion-label>
-      <ion-input type="text" value="26%"></ion-input>
-    </ion-item>
+        <ion-note item-left>BILLED</ion-note>
+        <ion-label text-right>5.760 €</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-note item-left>COMMON</ion-note>
+        <ion-label text-right>200 €</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-note item-left>SHARE</ion-note>
+        <ion-label text-right>5.560 €</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+  <h3>People</h3>
+  <ion-card>
+    <ion-list>
+      <ion-item>
+        <ion-avatar item-left>
+          <img src="https://dummyimage.com/100x100/000/fff">
+        </ion-avatar>
+        <h2>Alberto Gualis</h2>
+        <p>26%</p>
+      </ion-item>
+      <ion-item>
+        <ion-note item-left>TO BILL</ion-note>
+        <ion-label text-right>1.445 €</ion-label>
+      </ion-item>
     </ion-list>
   </ion-card>
   <ion-card>
-    <ion-card-header>
-    <ion-icon name="person" item-left></ion-icon>
-      Dani Latorre
-    </ion-card-header>
     <ion-list>
       <ion-item>
-        <ion-label>Active</ion-label>
-        <ion-toggle checked="true"></ion-toggle>
+        <ion-avatar item-left>
+          <img src="https://dummyimage.com/100x100/000/fff">
+        </ion-avatar>
+        <h2>Dani Latorre</h2>
+        <p>26%</p>
       </ion-item>
       <ion-item>
-      <ion-label>Individual percent</ion-label>
-      <ion-input type="text" value="26%"></ion-input>
-    </ion-item>
+        <ion-note item-left>BILLED</ion-note>
+        <ion-label text-right color="primary">1.445 €</ion-label>
+      </ion-item>
     </ion-list>
   </ion-card>
   <ion-card>
-    <ion-card-header>
-    <ion-icon name="person" item-left></ion-icon>
-      Javier Rubio
-    </ion-card-header>
     <ion-list>
       <ion-item>
-        <ion-label>Active</ion-label>
-        <ion-toggle checked="true"></ion-toggle>
+        <ion-avatar item-left>
+          <img src="https://dummyimage.com/100x100/000/fff">
+        </ion-avatar>
+        <h2>Javi Rubio</h2>
+        <p>26%</p>
       </ion-item>
       <ion-item>
-      <ion-label>Individual percent</ion-label>
-      <ion-input type="text" value="26%"></ion-input>
-    </ion-item>
+        <ion-note item-left>PAID</ion-note>
+        <ion-label text-right color="secondary">1.445 €</ion-label>
+      </ion-item>
     </ion-list>
   </ion-card>
   <ion-card>
-    <ion-card-header>
-    <ion-icon name="person" item-left></ion-icon>
-      Jesús Cuadra
-    </ion-card-header>
     <ion-list>
       <ion-item>
-        <ion-label>Active</ion-label>
-        <ion-toggle checked="true"></ion-toggle>
+        <ion-avatar item-left>
+          <img src="https://dummyimage.com/100x100/000/fff">
+        </ion-avatar>
+        <h2>Jesús Cuadra</h2>
+        <p>26%</p>
       </ion-item>
       <ion-item>
-      <ion-label>Individual percent</ion-label>
-      <ion-input type="text" value="26%"></ion-input>
-    </ion-item>
+        <ion-note item-left>TO BILL</ion-note>
+        <ion-label text-right>1.445 €</ion-label>
+      </ion-item>
     </ion-list>
   </ion-card>
   <ion-card>
-    <ion-card-header>
-    <ion-icon name="person" item-left></ion-icon>
-      Néstor Salceda
-    </ion-card-header>
     <ion-list>
       <ion-item>
-        <ion-label>Active</ion-label>
-        <ion-toggle checked="true"></ion-toggle>
+        <ion-avatar item-left>
+          <img src="https://dummyimage.com/100x100/000/fff">
+        </ion-avatar>
+        <h2>Néstor Salceda</h2>
+        <p>26%</p>
       </ion-item>
       <ion-item>
-      <ion-label>Individual percent</ion-label>
-      <ion-input type="text" value="26%"></ion-input>
-    </ion-item>
+        <ion-note item-left>TO BILL</ion-note>
+        <ion-label text-right>1.445 €</ion-label>
+      </ion-item>
     </ion-list>
   </ion-card>
+  <button ion-button block>
+    Edit
+  </button>
+  <p></p>
+
+  <ion-segment outline color="dark">
+    <ion-segment-button value="prev">
+      Previous
+    </ion-segment-button>
+    <ion-segment-button value="next">
+      Next
+    </ion-segment-button>
+  </ion-segment>
+
+
+
 
 </ion-content>

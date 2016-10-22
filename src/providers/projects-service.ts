@@ -6,16 +6,16 @@ import { Observable } from 'rxjs/Observable';
 
 
 @Injectable()
-export class IterationsService {
+export class ProjectsService {
 
   constructor(public http: Http) { }
 
-  iterationsByProject() {
+  allProjects() {
     let promise = fasten.ProjectService.allProjects();
     return Observable.fromPromise(promise);
   }
 
-  iterationById(id) {
+  projectById(id) {
     let promise = fasten.ProjectService.findById(id);
     return Observable.fromPromise(promise);
   }

@@ -16,7 +16,7 @@ export class IterationsService {
   }
 
   iterationById(id) {
-    let promise = fasten.ProjectService.findById();
+    let promise = fasten.ProjectService.findById(id);
     return Observable.fromPromise(promise);
   }
 

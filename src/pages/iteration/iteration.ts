@@ -22,10 +22,8 @@ export class Iteration {
   }
 
   ionViewWillEnter() {
-    console.log('Hello Iteration Page '+ this.id);
     this.iterationsService.iterationById(this.id)
       .subscribe( iteration => {
-        console.log(iteration)
         this.iteration = iteration;
       });
   }

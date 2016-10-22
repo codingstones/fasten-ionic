@@ -1,20 +1,110 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>New Iteration</ion-title>
+  <ion-title>New Iteration</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
   <form (ngSubmit)="create()">
-  <ion-list>
+    <ion-list>
     <ion-item>
-      <ion-label floating>Name</ion-label>
+      <ion-label>Name</ion-label>
       <ion-input type="text" [(ngModel)]="iteration.name" name="name"></ion-input>
     </ion-item>
-
+      <ion-item>
+        <ion-label>Total</ion-label>
+        <ion-input type="text" value="7.200€"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Common percent</ion-label>
+        <ion-input type="text" value="3,5%"></ion-input>
+      </ion-item>
+    </ion-list>
+    <h3 padding>People</h3>
+    <ion-card>
+      <ion-card-header>
+      <ion-icon name="person" item-left></ion-icon>
+        Alberto Gualis
+      </ion-card-header>
+      <ion-list>
+        <ion-item>
+          <ion-label>Active</ion-label>
+          <ion-toggle checked="true"></ion-toggle>
+        </ion-item>
+        <ion-item>
+        <ion-label>Individual percent</ion-label>
+        <ion-input type="text" value="26%"></ion-input>
+      </ion-item>
+      </ion-list>
+    </ion-card>
+    <ion-card>
+      <ion-card-header>
+      <ion-icon name="person" item-left></ion-icon>
+        Dani Latorre
+      </ion-card-header>
+      <ion-list>
+        <ion-item>
+          <ion-label>Active</ion-label>
+          <ion-toggle checked="true"></ion-toggle>
+        </ion-item>
+        <ion-item>
+        <ion-label>Individual percent</ion-label>
+        <ion-input type="text" value="26%"></ion-input>
+      </ion-item>
+      </ion-list>
+    </ion-card>
+    <ion-card>
+      <ion-card-header>
+      <ion-icon name="person" item-left></ion-icon>
+        Javier Rubio
+      </ion-card-header>
+      <ion-list>
+        <ion-item>
+          <ion-label>Active</ion-label>
+          <ion-toggle checked="true"></ion-toggle>
+        </ion-item>
+        <ion-item>
+        <ion-label>Individual percent</ion-label>
+        <ion-input type="text" value="26%"></ion-input>
+      </ion-item>
+      </ion-list>
+    </ion-card>
+    <ion-card>
+      <ion-card-header>
+      <ion-icon name="person" item-left></ion-icon>
+        Jesús Cuadra
+      </ion-card-header>
+      <ion-list>
+        <ion-item>
+          <ion-label>Active</ion-label>
+          <ion-toggle checked="true"></ion-toggle>
+        </ion-item>
+        <ion-item>
+        <ion-label>Individual percent</ion-label>
+        <ion-input type="text" value="26%"></ion-input>
+      </ion-item>
+      </ion-list>
+    </ion-card>
+    <ion-card>
+      <ion-card-header>
+      <ion-icon name="person" item-left></ion-icon>
+        Néstor Salceda
+      </ion-card-header>
+      <ion-list>
+        <ion-item>
+          <ion-label>Active</ion-label>
+          <ion-toggle checked="true"></ion-toggle>
+        </ion-item>
+        <ion-item>
+        <ion-label>Individual percent</ion-label>
+        <ion-input type="text" value="26%"></ion-input>
+      </ion-item>
+      </ion-list>
+    </ion-card>
     <ion-item>
       <button ion-button type="submit">Create Iteration</button>
     </ion-item>
-  </ion-list>
   </form>
+
 </ion-content>
+

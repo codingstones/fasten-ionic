@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 
 /*
   Generated class for the NewIteration page.
@@ -13,9 +13,13 @@ import { NavController } from 'ionic-angular';
 })
 export class NewIteration {
   iteration;
-  constructor(public navCtrl: NavController) {}
+  project;
+
+  constructor(public navCtrl: NavController, private navParams: NavParams) {
+  }
 
   ionViewDidLoad() {
+    this.project = this.navParams.get('project');
     this.iteration = {'name':'Iteration N'}
   }
 

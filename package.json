@@ -13,6 +13,7 @@
     "run:before": "build"
   },
   "dependencies": {
+    "fasten-core": "file:../fasten-core",
     "@angular/common": "2.0.0",
     "@angular/compiler": "2.0.0",
     "@angular/compiler-cli": "0.6.2",

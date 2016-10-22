@@ -1,28 +1,23 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
-import 'rxjs/add/operator/map';
+import fasten from 'fasten-core';
+import 'rxjs/Rx';
+import { Observable } from 'rxjs/Observable';
 
-/*
-  Generated class for the IterationsService provider.
 
-  See https://angular.io/docs/ts/latest/guide/dependency-injection.html
-  for more info on providers and Angular 2 DI.
-*/
 @Injectable()
 export class IterationsService {
 
-  constructor(public http: Http) {
-    console.log('Hello IterationsService Provider');
-  }
+  constructor(public http: Http) { }
 
   iterationsByProject() {
-    return this.http.get('https://fasten-backend.herokuapp.com/iterations')
-      .map(res => res.json());
+    let promise = fasten.ProjectService.allProjects();
+    return Observable.fromPromise(promise);
   }
 
   iterationById(id) {
-    return this.http.get(`https://fasten-backend.herokuapp.com/iterations/${id}`)
-      .map(res => res.json());
+    let promise = fasten.ProjectService.findById();
+    return Observable.fromPromise(promise);
   }
 
   createIteration(data){

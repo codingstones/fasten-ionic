@@ -3,8 +3,8 @@
     <ion-title>Project</ion-title>
 
     <ion-buttons end>
-      <button ion-button solid color="secondary" solid (click)="goToNewIteration()">
-        + Iteration
+      <button ion-button (click)="goToNewIteration()">
+        New
       </button>
     </ion-buttons>
   </ion-navbar>
@@ -19,11 +19,9 @@
       </ion-item>
       <ion-item-options side="right">
         <button ion-button color="secondary">
-          <ion-icon name="create"></ion-icon>
           Edit
         </button>
         <button ion-button color="danger">
-          <ion-icon name="trash"></ion-icon>
           Delete
         </button>
       </ion-item-options>

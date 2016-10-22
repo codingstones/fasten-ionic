@@ -11,7 +11,7 @@
 </ion-header>
 
 <ion-content padding>
-  <h2 text-center>Conecta</h2>
+  <h2 text-center *ngIf="project">{{project.name}}</h2>
   <ion-list>
     <ion-item-sliding *ngFor="let iteration of iterations">
       <ion-item>

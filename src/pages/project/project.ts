@@ -17,6 +17,7 @@ import { ProjectsService } from '../../providers/projects-service';
 })
 export class Project {
   project;
+  iterations;
   id;
 
   constructor(public navCtrl: NavController, public projectsService: ProjectsService, private navParams: NavParams) {
@@ -39,6 +40,7 @@ export class Project {
     this.projectsService.projectById(this.id)
       .subscribe( project => {
         this.project = project;
+        this.iterations = project['iterations'];
       });
   }
 

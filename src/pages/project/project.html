@@ -3,7 +3,7 @@
     <ion-title>Project</ion-title>
 
     <ion-buttons end>
-      <button ion-button color="secondary" solid (click)="goToNewIteration()">
+      <button ion-button solid color="secondary" solid (click)="goToNewIteration()">
         + Iteration
       </button>
     </ion-buttons>
@@ -13,8 +13,20 @@
 <ion-content padding>
   <h1>Conecta</h1>
   <ion-list>
-    <ion-item *ngFor="let iteration of iterations">
-      <h2 (click)="goToIteration(iteration.id)">{{iteration.name}}</h2>
-    </ion-item>
+    <ion-item-sliding *ngFor="let iteration of iterations">
+      <ion-item>
+        <h2 (click)="goToIteration(iteration.id)">{{iteration.name}}</h2>
+      </ion-item>
+      <ion-item-options side="right">
+        <button ion-button color="secondary">
+          <ion-icon name="create"></ion-icon>
+          Edit
+        </button>
+        <button ion-button color="danger">
+          <ion-icon name="trash"></ion-icon>
+          Delete
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
   </ion-list>
 </ion-content>

@@ -16,7 +16,7 @@ export class NewIteration {
   constructor(public navCtrl: NavController) {}
 
   ionViewDidLoad() {
-    this.iteration = {}
+    this.iteration = {'name':'Iteration N'}
   }
 
   create(){

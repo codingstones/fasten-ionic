@@ -4,20 +4,10 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-    <ion-list>
-      <ion-item-sliding *ngFor="let project of projects">
-        <ion-item>
-          <h2 (click)="goToProject(project.id)">{{project.name}}</h2>
-        </ion-item>
-        <ion-item-options side="right">
-          <button ion-button color="secondary">
-            Edit
-          </button>
-          <button ion-button color="danger">
-            Delete
-          </button>
-        </ion-item-options>
-      </ion-item-sliding>
-    </ion-list>
+<ion-content>
+  <ion-list inset>
+    <ion-item detail-push *ngFor="let project of projects">
+      <h2 (click)="goToProject(project.id)">{{project.name}}</h2>
+    </ion-item>
+  </ion-list>
 </ion-content>

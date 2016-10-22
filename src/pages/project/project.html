@@ -12,19 +12,11 @@
 
 <ion-content padding>
   <h2 text-center *ngIf="project">{{project.name}}</h2>
-  <ion-list>
-    <ion-item-sliding *ngFor="let iteration of iterations">
+  <ion-list inset>
+    <ion-item *ngFor="let iteration of iterations">
       <ion-item>
         <h2 (click)="goToIteration(iteration.id)">{{iteration.name}}</h2>
       </ion-item>
-      <ion-item-options side="right">
-        <button ion-button color="secondary">
-          Edit
-        </button>
-        <button ion-button color="danger">
-          Delete
-        </button>
-      </ion-item-options>
-    </ion-item-sliding>
+    </ion-item>
   </ion-list>
 </ion-content>

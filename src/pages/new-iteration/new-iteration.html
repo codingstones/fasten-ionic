@@ -6,19 +6,20 @@
 
 <ion-content padding>
   <form (ngSubmit)="create()">
-    <ion-item>
-      <ion-label>Name</ion-label>
-      <ion-input type="text" [(ngModel)]="iteration.name" name="name"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label>Total</ion-label>
-      <ion-input type="text" value="7.200€"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label>Common percent</ion-label>
-      <ion-input type="text" value="3,5%"></ion-input>
-    </ion-item>
-    <h3 text-center padding>People</h3>
+    <ion-list inset>
+      <ion-item>
+        <ion-label>Name</ion-label>
+        <ion-input type="text" [(ngModel)]="iteration.name" name="name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Total</ion-label>
+        <ion-input type="text" value="7.200€"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Common percent</ion-label>
+        <ion-input type="text" value="3,5%"></ion-input>
+      </ion-item>
+    </ion-list>
     <ion-card>
       <ion-card-header>
       <ion-icon name="person" item-left></ion-icon>

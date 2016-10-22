@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { NavParams } from 'ionic-angular';
-import { IterationsService } from '../../providers/iterations-service';
+//import { IterationsService } from '../../providers/iterations-service';
 /*
   Generated class for the Iteration page.
 
@@ -10,22 +10,18 @@ import { IterationsService } from '../../providers/iterations-service';
 */
 @Component({
   selector: 'page-iteration',
-  templateUrl: 'iteration.html',
-  providers: [IterationsService]
+  templateUrl: 'iteration.html'
 })
 export class Iteration {
   id;
   iteration;
 
-  constructor(public navCtrl: NavController, private navParams: NavParams, public iterationsService: IterationsService) {
+  constructor(public navCtrl: NavController, private navParams: NavParams) {
     this.id = navParams.get('id');
   }
 
   ionViewWillEnter() {
-    this.iterationsService.iterationById(this.id)
-      .subscribe( iteration => {
-        this.iteration = iteration;
-      });
+    
   }
 
 }
